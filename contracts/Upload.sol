@@ -8,13 +8,19 @@ contract Upload {
      address user; 
      bool access; //true or false
   }
-  mapping(address=>string[]) value;
+
+  struct FileEntry{
+    string url;
+    string fileName;
+  }
+
+  mapping(address=>FileEntry[]) value;
   mapping(address=>mapping(address=>bool)) ownership;
   mapping(address=>Access[]) accessList;
   mapping(address=>mapping(address=>bool)) previousData;
 
-  function add(address _user,string memory url) external {
-      value[_user].push(url);
+  function add(address _user,string memory url, string memory fileName) external {
+      value[_user].push(FileEntry(url, fileName));
   }
   function allow(address user) external {//def
       ownership[msg.sender][user]=true; 
@@ -41,7 +47,11 @@ contract Upload {
 
   function display(address _user) external view returns(string[] memory){
       require(_user==msg.sender || ownership[_user][msg.sender],"You don't have access");
-      return value[_user];
+      string[] memory concatenatedStrings = new string[](value[_user].length);
+      for (uint256 i = 0; i < value[_user].length; i++) {
+            concatenatedStrings[i] = string(abi.encodePacked(value[_user][i].url, " | ", value[_user][i].fileName));
+      }
+      return concatenatedStrings;
   }
 
   function shareAccess() public view returns(Access[] memory){
