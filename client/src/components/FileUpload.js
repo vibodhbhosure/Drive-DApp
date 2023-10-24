@@ -48,7 +48,7 @@ const FileUpload = ({ contract, account, provider }) => {
     <div className="top">
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="file-upload" className="choose">
-          Choose Image
+          Choose File
         </label>
         <input
           disabled={!account}

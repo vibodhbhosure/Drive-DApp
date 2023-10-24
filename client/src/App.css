@@ -46,10 +46,10 @@ body {
 
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  background-image: linear-gradient(-60deg, rgb(176, 183, 173) 50%, rgb(194, 196, 198) 50%);
   bottom: 0;
   left: -50%;
-  opacity: 0.5;
+  opacity: 0.6;
   position: fixed;
   right: -50%;
   top: 0;
@@ -133,14 +133,15 @@ p {
   padding: 16px;
   margin-top: 10px;
   vertical-align: center;
-  background: #f44336;
+  background: rgb(247, 196, 56);
   width: 70px;
   height: 45px;
-  color: white;
+  color: rgb(143, 133, 133);
   border: none;
   border-radius: 4px;
-  font-size: 13px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 15px;
+  font-weight: 400;
+ 
   z-index: -1;
 }
 
