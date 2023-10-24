@@ -45,23 +45,30 @@ const FileUpload = ({ contract, account, provider }) => {
     e.preventDefault();
   };
   return (
+    <div className="outer">
     <div className="top">
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="file-upload" className="choose">
+   
+    <label htmlFor="file-upload" className="choose">
           Choose File
         </label>
-        <input
-          disabled={!account}
-          type="file"
-          id="file-upload"
-          name="data"
-          onChange={retrieveFile}
-        />
         <span className="textArea">Image: {fileName}</span>
-        <button type="submit" className="upload" disabled={!file}>
-          Upload File
-        </button>
-      </form>
+        <form className="form" onSubmit={handleSubmit}>
+       
+       <input
+         disabled={!account}
+         type="file"
+         id="file-upload"
+         name="data"
+         onChange={retrieveFile}
+       />
+       
+       <button type="submit" className="upload" disabled={!file}>
+         Upload File
+       </button>
+     </form>
+    </div>
+
+   
     </div>
   );
 };

@@ -75,6 +75,10 @@ const Display = ({ contract, account }) => {
       <button className="center button" onClick={getdata}>
         Get Data
       </button>
+      
+      
+     
+
     </>
   );
 };

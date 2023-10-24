@@ -48,7 +48,7 @@ function App() {
     <>
       {!modalOpen && (
         <button className="share" onClick={() => setModalOpen(true)}>
-          Share
+          CShare
         </button>
       )}
       {modalOpen && (
@@ -56,7 +56,7 @@ function App() {
       )}
 
       <div className="App">
-        <h1 style={{ color: "grey",fontFamily:"sans-serif" }}>Gdrive 3.0</h1>
+        <h1 style={{ color: "grey",fontFamily:"sans-serif" }}>ChainStorage</h1>
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>

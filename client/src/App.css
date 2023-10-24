@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -130,19 +131,26 @@ p {
   margin-bottom: 30px;
 }
 .share {
-  padding: 16px;
+  padding-top: 50px;
+  /* padding: 16px 16px; */
   margin-top: 10px;
   vertical-align: center;
-  background: rgb(247, 196, 56);
-  width: 70px;
-  height: 45px;
-  color: rgb(143, 133, 133);
-  border: none;
-  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-image: url(./images/Google_Drive_icon_\(2020\).svg.png) ;
+  background-size: 90px;
+  /* background: rgb(247, 196, 56); */
+  width: 90px;
+  height: 90px;
+  color:white;
+  border: black solid;
+  border-radius: 50px;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
+  position: absolute;
+  top: 550px;
+  right: 100px;
  
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .share:hover {
