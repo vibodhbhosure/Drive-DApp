@@ -17,32 +17,32 @@
 }
 
 .button {
-  background-color: initial;
-  background-image: linear-gradient(-180deg, #009ffd, #2a2a72);
+  background-color: rgb(61, 110,201);
   border-radius: 6px;
   color: #ffffff;
   padding: 5px 10px;
   border: none;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-right: 10px;
   padding-bottom: 10px;
 }
 
 .button:hover {
-  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+  box-shadow: rgb(140, 138, 138) 0 3px 8px;
 }
 
 .address {
   display: block;
   margin: auto;
-  height: 30px;
+  height: 300px;
   width: 330px;
   text-align: center;
+  
 }
 
 input[type="text"]:focus {
-  background-color: lightblue;
+  background-color: none;
 }
 
 .dis-table p {
